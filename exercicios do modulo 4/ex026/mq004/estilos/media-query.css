@@ -12,8 +12,31 @@ Grandes telas: cima de 1200px
  */
 
 @media print {
-    
-    
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    main {
+        width: 90vw;
+        border: 2px solid black;
+    }
+
+    main::after {
+        content: 'Essa impressão foi feita por Danilo mr';
+    }
+
+    main h1 {
+        text-shadow: none;
+        color: black;
+    }
+
+    img#phone { display: none; }
+    img#table { display: none; }
+    img#print { display: block; }
+    img#pc { display: none; }
+    img#tv { display: none; }
+}
+
 
 @media  screen and (min-width: 768px) and (max-width: 992px) {
     body {
@@ -42,6 +65,10 @@ Grandes telas: cima de 1200px
 @media  screen and (min-width: 1200px) {
     body {
         background-image: url(../imagens/back-tv.jpg);
+    }
+
+    main {
+        width: 700px;
     }
 
     img#phone { display: none; }
